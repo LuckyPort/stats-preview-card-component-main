@@ -1,0 +1,165 @@
+:root {
+  --Very-dark-blue: hsl(233, 47%, 7%);
+  --Dark-desaturated-blue: hsl(244, 38%, 16%);
+  --Soft-violet: hsl(277, 64%, 61%);
+  --White: hsl(0, 0%, 100%);
+  --White01: hsla(0, 0%, 100%, 0.75);
+  --White02: hsla(0, 0%, 100%, 0.6);
+  --paragraph: 15px;
+  --font-Inter: "Inter";
+  --font-Lexend: "Lexend Deca";
+}
+html {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+p {
+  font-family: var(--font-Lexend);
+  font-size: 14px;
+  color: var(--White01);
+}
+h2 {
+  color: var(--White02);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+span,
+a {
+  font-family: var(--font-Inter);
+  color: var(--White);
+}
+main {
+  position: relative;
+  min-height: 100vh;
+  background-color: var(--Very-dark-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+span {
+  color: var(--Soft-violet);
+}
+.kartu {
+  position: relative;
+  height: 400px;
+  width: 1000px;
+  background-color: var(--Dark-desaturated-blue);
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.kartu-left {
+  box-sizing: border-box;
+  position: relative;
+  flex: 1;
+  padding: 60px;
+}
+.kartu-right {
+  position: relative;
+  flex: 1.5;
+  background-color: var(--Soft-violet);
+  background-image: url(./images/image-header-desktop.jpg);
+  background-blend-mode: hard-light;
+}
+.kartu-right::before {
+  content: " ";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: var(--Soft-violet);
+  opacity: 0.2;
+  
+}
+.kartu-right::after {
+  content: " ";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+.stats {
+  box-sizing: border-box;
+  position: absolute;
+  display: grid;
+  column-gap: 2rem;
+  place-items: center;
+  bottom: 40px;
+  grid-template-columns: repeat(3, 1fr);
+}
+.stats p {
+  margin: 0;
+  text-transform: uppercase;
+}
+footer {
+  color: var(--White02);
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 50px;
+  font-family: var(--font-Inter);
+  background-color: var(--Dark-desaturated-blue);
+  padding: 20px;
+  border-radius: 25px;
+  
+}
+footer a{
+    text-decoration: none;
+}
+
+@media screen and (max-width: 789px) {
+  .kartu {
+    flex-direction: column-reverse;
+    height: 110vh;
+    width: 90%;
+   margin: 20px 0px;
+  }
+  .kartu-left {
+    flex: 2;
+    padding: 12px;
+  }
+  .kartu-right {
+    flex: 1;
+    text-align: center;
+    background-size: cover;
+    min-width: 100%;
+  }
+  .stats {
+    grid-template-columns: 1fr;
+    text-align: center;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  span,
+  a {
+    text-align: center;
+  }
+  p{
+    text-align: center;
+    line-height: 25px;
+    padding: 0px 20px;
+  }
+  .kartu-right::before,
+  .kartu-right::after{
+    left: 50%;
+    transform: translate(-50%);
+  }
+  footer{
+    position: relative;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+  }
+}
