@@ -94,9 +94,12 @@ span {
   bottom: 40px;
   grid-template-columns: repeat(3, 1fr);
 }
-.stats p {
+.stats span {
   margin: 0;
   text-transform: uppercase;
+  font-family: var(--font-Lexend);
+  font-size: 14px;
+  color: var(--White01);
 }
 footer {
   color: var(--White02);
@@ -113,6 +116,7 @@ footer {
 footer a{
     text-decoration: none;
 }
+
 
 @media screen and (max-width: 789px) {
   .kartu {
