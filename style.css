@@ -117,9 +117,10 @@ footer a{
 @media screen and (max-width: 789px) {
   .kartu {
     flex-direction: column-reverse;
-    height: 110vh;
+    min-height:  120vh ;
     width: 90%;
    margin: 20px 0px;
+
   }
   .kartu-left {
     flex: 2;
@@ -132,10 +133,13 @@ footer a{
     min-width: 100%;
   }
   .stats {
+    position: absolute;
     grid-template-columns: 1fr;
     text-align: center;
     left: 50%;
     transform: translate(-50%);
+    bottom:  40px;
+
   }
   h1,
   h2,
@@ -150,6 +154,7 @@ footer a{
     text-align: center;
     line-height: 25px;
     padding: 0px 20px;
+    font-size: var(--paragraph);
   }
   .kartu-right::before,
   .kartu-right::after{
@@ -160,6 +165,9 @@ footer a{
     position: relative;
     text-align: center;
     bottom: 0;
-    width: 100%;
+    min-width: 100vw;
+    border-radius: 0px;
+    padding: 0;
+    padding: 20px 0px;
   }
 }
